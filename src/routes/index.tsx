@@ -8,9 +8,18 @@ const routes = [
   {
     path: "/",
     element: <MainLayout />,
+    handle: { breadcrumb: "Trang chủ" },
     children: [
-      { path: PATH.DASHBOARD, element: <DashboardPage /> },
-      { path: PATH.NEWS, element: <NewsPage /> },
+      {
+        path: PATH.DASHBOARD,
+        element: <DashboardPage />,
+        handle: { breadcrumb: "Dashboard" },
+      },
+      {
+        path: PATH.NEWS,
+        element: <NewsPage />,
+        handle: { breadcrumb: "Quản lý tin tức" },
+      },
     ],
   },
 ];
